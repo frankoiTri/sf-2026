@@ -75,12 +75,12 @@ strong {
 
 .year {
     font-family: var(--font-heading);
-    font-size: 4rem;
+    font-size: 10rem;
     font-weight: 800;
     display: block;
     line-height: 1;
-    color: rgba(255, 255, 255, 0.2);
-    margin-bottom: -20px;
+    color: rgba(255, 255, 255, 0.1);
+    margin-bottom: -40px;
 }
 
 .hero h1 {
@@ -448,7 +448,8 @@ strong {
     }
     
     .year {
-        font-size: 3rem;
+        font-size: 6rem;
+        margin-bottom: -30px;
     }
     
     .section {
