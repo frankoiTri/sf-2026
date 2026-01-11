@@ -179,6 +179,14 @@ strong {
 }
 
 /* Project Section */
+
+.project {
+    background-image: url('assets/ruban.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .project h2 {
     text-align: center;
     font-size: 2.5rem;
@@ -192,7 +200,9 @@ strong {
 }
 
 .project-card {
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -215,6 +225,23 @@ strong {
     font-size: 2.5rem;
 }
 
+.supports {
+    background-image: url('assets/ruban-2.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.supports .container {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-bottom: 4px solid var(--secondary-red);
+}
+
 .supports h2 {
     text-align: center;
 }
@@ -226,6 +253,10 @@ strong {
     font-size: 1.1rem;
 }
 
+.team {
+    background: #f7e7df;
+}
+
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -234,9 +265,28 @@ strong {
 
 .team-member {
     padding: 25px;
-    border: 1px solid #eee;
+    border: 1px solid #a1afcc;
     border-radius: 8px;
     transition: all 0.3s ease;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #eee;
+}
+
+.team-member img.placeholder {
+    object-fit: contain;
+    padding: 20px;
+    background-color: var(--bg-light);
 }
 
 .team-member:hover {
@@ -281,18 +331,55 @@ strong {
     border-bottom: none;
 }
 
-/* CTA Footer */
-.cta-footer {
+.vote {
     background: var(--primary-blue);
     color: var(--white);
     padding: 80px 0 40px;
     text-align: center;
 }
 
-.cta-footer strong {
+/* CTA Footer */
+.cta-footer {
+    background: var(--primary-blue);
     color: var(--white);
-    text-decoration: underline;
-    text-decoration-color: var(--secondary-red);
+    padding: 40px 0 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.footer-skyline {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 40px;
+    gap: 0;
+    width: 100%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.footer-skyline img {
+    height: auto;
+    max-height: 120px; /* Reduced from 150px for non-Eiffel buildings */
+    width: auto;
+    max-width: 25%;
+    object-fit: contain;
+    margin-bottom: -1px; /* Fix for potential sub-pixel gaps */
+}
+
+.footer-skyline img[src*="tour-eiffel"] {
+    max-height: 180px; /* Kept larger */
+    transform-origin: bottom center;
+    z-index: 1; /* Ensure it stays on top if overlaps occur */
+}
+
+@media (max-width: 768px) {
+    .footer-skyline img {
+        max-height: 80px;
+    }
 }
 
 .final-message {
@@ -305,9 +392,10 @@ strong {
     color: var(--primary-blue);
     display: inline-block;
     padding: 30px 50px;
-    border-radius: 12px;
     margin: 40px 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-bottom: 4px solid var(--secondary-red);
 }
 
 .date-box p {
@@ -325,6 +413,12 @@ strong {
     margin: 10px 0;
 }
 
+.vote-icon {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
 .vote-call {
     font-size: 1.5rem;
     font-weight: 700;
@@ -336,9 +430,6 @@ strong {
 .copyright {
     font-size: 0.8rem;
     opacity: 0.5;
-    margin-top: 40px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 20px;
 }
 
 @media (max-width: 768px) {
