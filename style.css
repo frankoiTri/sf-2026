@@ -726,6 +726,27 @@ strong {
     margin: 0 auto 40px;
 }
 
+.faq-group h4 {
+    font-size: 1.1rem;
+    margin-top: 32px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.faq-site-intro p:last-child {
+    margin-bottom: 40px;
+}
+
+.faq-site-intro ul {
+    padding-left: 20px;
+    margin: 10px 0 20px;
+}
+
+.faq-site-intro li {
+    margin-bottom: 6px;
+}
+
 .faq-group h3 {
     font-size: 1.2rem;
     margin-bottom: 20px;
